@@ -1,8 +1,14 @@
-//
-// This is only a SKELETON file for the 'RNA Transcription' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+var Strands = new Map();
+Strands.set("C", "G" );
+Strands.set("G", "C" );
+Strands.set("A", "U" );
+Strands.set("T", "A" );
 
-export const toRna = () => {
-  throw new Error("Remove this statement and implement this function");
-};
+export const toRna = (input = "") =>  { 
+  
+   let rnavalue = [];
+   for (let value of input) {     
+     rnavalue.push ( Strands.get(value) );     
+  }
+  return rnavalue.join("");  
+}
