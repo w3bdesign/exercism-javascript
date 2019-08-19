@@ -10,7 +10,6 @@ const planets = {
   neptune: 164.79132
 };
 export const age = (planetname, planetseconds) => {
-  return (
-    Math.round((planetseconds / SECONDS / planets[planetname]) * 100) / 100
-  );
+  let temporary = ((planetseconds / SECONDS / planets[planetname]) * 100) / 100;
+  return Number(temporary.toFixed(2));
 };
