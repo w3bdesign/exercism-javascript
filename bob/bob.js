@@ -14,6 +14,8 @@ He answers 'Whatever.' to anything else.
 
 */
 
+// TODO: Make checks more elegant
+
 function isQuestion() {}
 
 function isYellAtHim() {}
@@ -25,14 +27,38 @@ function isSayNothing() {}
 export const hey = message => {
   "use strict";
 
+  if (message === "" || message.trim() === "") {
+    return "Fine. Be that way!";
+  }
+
+  if (
+    message.indexOf("?") != -1 &&
+    message === message.toUpperCase() &&
+    !message.match(/[1-9]/i)
+  ) {
+    if (message.match(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>]/)) {
+      return "Sure.";
+    }
+  }
+
+  if (message === message.toUpperCase()) {
+    return "Whoa, chill out!";
+  }
+
+  // var regex = new RegExp("\\?", "g");
+  //var regex = new RegExp("!", "g");
+  // console.log(searchString.search(regex));
+  //let questionAsked = searchString.search("?") ?
+
+  //let questionAsked = searchString.search("?");
+  //console.log(searchString.search(\\?\));
+
+  //console.log(searchString.search(\!\));
+
   /* Answers for questions */
-  const ASKEDQUESTION = "Sure.";
-  const ASKEDYELL = "Whoa, chill out!";
+  const ASKEDQUESTION = "Sure."; //new RegExp("\\?", "g");
+  const ASKEDYELL = "Whoa, chill out!"; //new RegExp("!", "g");
   const ASKEDYELLAQUESTION = `Calm down, I know what I'm doing!`;
   const ASKEDNOTHING = "Fine. Be that way!";
   const askedDefault = "Whatever.";
-
-  return "Whatever.";
-
-  console.log(message);
 };
