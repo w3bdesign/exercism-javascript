@@ -1,9 +1,19 @@
 "use strict";
+
+function transpose(a) {
+  return Object.keys(a[0]).map(function(c) {
+    return a.map(function(r) {
+      return r[c];
+    });
+  });
+}
+
 export class Matrix {
   constructor(input) {
-    this.matrix = input
-      .split("\n")
-      .map(row => row.split(" ").map(row => parseInt(row)));
+    let splitMatrix = input.split("\n");
+    this.matrix = splitMatrix.map(row =>
+      row.split(" ").map(row => Number(row))
+    );
   }
 
   get rows() {
@@ -11,6 +21,6 @@ export class Matrix {
   }
 
   get columns() {
-    return this.rows[0].map((value, index) => this.rows.map(row => row[index]));
+    return transpose(this.rows);
   }
 }
