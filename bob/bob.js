@@ -1,64 +1,30 @@
-/*
-
-Bob is a lackadaisical teenager. In conversation, his responses are very limited.
-
-Bob answers 'Sure.' if you ask him a question.
-
-He answers 'Whoa, chill out!' if you yell at him.
-
-He retorts 'Calm down, I know what I'm doing!' if you yell a question at him.
-
-He says 'Fine. Be that way!' if you address him without actually saying anything.
-
-He answers 'Whatever.' to anything else.
-
-*/
-
-// TODO: Make checks more elegant
-
-function isQuestion() {}
-
-function isYellAtHim() {}
-
-function isYellQuestion() {}
-
-function isSayNothing() {}
-
-export const hey = message => {
-  "use strict";
-
-  if (message === "" || message.trim() === "") {
-    return "Fine. Be that way!";
+const Bob = {
+  responses: {
+    silence: "Fine. Be that way!",
+    shoutedQuestion: "Calm down, I know what I'm doing!",
+    yelling: "Whoa, chill out!",
+    question: "Sure.",
+    default: "Whatever."
   }
-
-  if (
-    message.indexOf("?") != -1 &&
-    message === message.toUpperCase() &&
-    !message.match(/[1-9]/i)
-  ) {
-    if (message.match(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>]/)) {
-      return "Sure.";
-    }
-  }
-
-  if (message === message.toUpperCase()) {
-    return "Whoa, chill out!";
-  }
-
-  // var regex = new RegExp("\\?", "g");
-  //var regex = new RegExp("!", "g");
-  // console.log(searchString.search(regex));
-  //let questionAsked = searchString.search("?") ?
-
-  //let questionAsked = searchString.search("?");
-  //console.log(searchString.search(\\?\));
-
-  //console.log(searchString.search(\!\));
-
-  /* Answers for questions */
-  const ASKEDQUESTION = "Sure."; //new RegExp("\\?", "g");
-  const ASKEDYELL = "Whoa, chill out!"; //new RegExp("!", "g");
-  const ASKEDYELLAQUESTION = `Calm down, I know what I'm doing!`;
-  const ASKEDNOTHING = "Fine. Be that way!";
-  const askedDefault = "Whatever.";
 };
+const emptyString = s => s.trim().length == 0;
+const analyzers = {
+  silence: query => emptyString(query),
+  yelling: query => query.match(/[A-Z]/) && query == query.toUpperCase(),
+  question: query => query.trimEnd().endsWith("?"),
+  shoutedQuestion: query =>
+    analyzers.yelling(query) && analyzers.question(query)
+};
+const responder = responders => {
+  return query => {
+    for (let [queryType, response] of Object.entries(responders)) {
+      if (queryType == "default") continue;
+
+      if (analyzers[queryType](query)) return response;
+    }
+    return responders.default;
+  };
+};
+
+const bob = responder(Bob.responses);
+export { bob as hey };
