@@ -1,13 +1,15 @@
 export class Triangle {
-  constructor() {
-    //
+  constructor(triangleSize) {
+    this.size = triangleSize;
+    this.rows = [];
+    console.log("Number of rows are: " + triangleSize);
   }
 
   get lastRow() {
-    return 1;
+    return [1];
   }
 
   get rows() {
-    return 1;
+    return [[1]];
   }
 }
