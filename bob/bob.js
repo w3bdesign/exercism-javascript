@@ -18,7 +18,7 @@ const analyzers = {
 const responder = responders => {
   return query => {
     for (let [queryType, response] of Object.entries(responders)) {
-      if (queryType == "default") continue;
+      if (queryType === "default") continue;
 
       if (analyzers[queryType](query)) return response;
     }
