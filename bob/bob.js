@@ -7,10 +7,10 @@ const Bob = {
     default: "Whatever."
   }
 };
-const emptyString = s => s.trim().length == 0;
+const emptyString = s => s.trim().length === 0;
 const analyzers = {
   silence: query => emptyString(query),
-  yelling: query => query.match(/[A-Z]/) && query == query.toUpperCase(),
+  yelling: query => query.match(/[A-Z]/) && query === query.toUpperCase(),
   question: query => query.trimEnd().endsWith("?"),
   shoutedQuestion: query =>
     analyzers.yelling(query) && analyzers.question(query)
