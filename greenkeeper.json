@@ -1,0 +1,22 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "bob/package.json",
+        "collatz-conjecture/package.json",
+        "gigasecond/package.json",
+        "hello-world/package.json",
+        "leap/package.json",
+        "matrix/package.json",
+        "pangram/package.json",
+        "pascals-triangle/package.json",
+        "resistor-color-duo/package.json",
+        "resistor-color/package.json",
+        "reverse-string/package.json",
+        "rna-transcription/package.json",
+        "space-age/package.json",
+        "two-fer/package.json"
+      ]
+    }
+  }
+}
