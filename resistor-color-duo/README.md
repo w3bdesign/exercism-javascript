@@ -41,7 +41,7 @@ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+npm test
 ```
 
 In the test suites all tests but the first have been skipped.

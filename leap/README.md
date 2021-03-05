@@ -28,14 +28,14 @@ phenomenon, go watch [this youtube video][video].
 Go through the setup instructions for Javascript to install the necessary
 dependencies:
 
-[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
+<https://exercism.io/tracks/javascript/installation>
 
 ## Requirements
 
 Install assignment dependencies:
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Making the test suite pass
@@ -43,7 +43,7 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+npm test
 ```
 
 In the test suites all tests but the first have been skipped.
@@ -53,7 +53,7 @@ Once you get a test passing, you can enable the next one by changing `xtest` to
 
 ## Source
 
-JavaRanch Cattle Drive, exercise 3 [http://www.javaranch.com/leap.jsp](http://www.javaranch.com/leap.jsp)
+JavaRanch Cattle Drive, exercise 3 <http://www.javaranch.com/leap.jsp>
 
 ## Submitting Incomplete Solutions
 

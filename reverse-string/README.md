@@ -18,7 +18,7 @@ dependencies:
 Install assignment dependencies:
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Making the test suite pass
@@ -26,7 +26,7 @@ $ npm install
 Execute the tests with:
 
 ```bash
-$ npm test
+npm test
 ```
 
 In the test suites all tests but the first have been skipped.
