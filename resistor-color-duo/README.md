@@ -33,7 +33,7 @@ dependencies:
 Install assignment dependencies:
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Making the test suite pass
