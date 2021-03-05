@@ -13,16 +13,16 @@ Given a number n, return the number of steps required to reach 1.
 
 Starting with n = 12, the steps would be as follows:
 
-0. 12
-1. 6
-2. 3
-3. 10
-4. 5
-5. 16
-6. 8
-7. 4
-8. 2
-9. 1
+0.  12
+1.  6
+2.  3
+3.  10
+4.  5
+5.  16
+6.  8
+7.  4
+8.  2
+9.  1
 
 Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
@@ -31,14 +31,14 @@ Resulting in 9 steps. So for input n = 12, the return value would be 9.
 Go through the setup instructions for Javascript to install the necessary
 dependencies:
 
-[https://exercism.io/tracks/javascript/installation](https://exercism.io/tracks/javascript/installation)
+<https://exercism.io/tracks/javascript/installation>
 
 ## Requirements
 
 Install assignment dependencies:
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Making the test suite pass
@@ -56,7 +56,7 @@ Once you get a test passing, you can enable the next one by changing `xtest` to
 
 ## Source
 
-An unsolved problem in mathematics named after mathematician Lothar Collatz [https://en.wikipedia.org/wiki/3x_%2B_1_problem](https://en.wikipedia.org/wiki/3x_%2B_1_problem)
+An unsolved problem in mathematics named after mathematician Lothar Collatz <https://en.wikipedia.org/wiki/3x_%2B_1_problem>
 
 ## Submitting Incomplete Solutions
 
