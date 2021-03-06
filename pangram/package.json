@@ -1,7 +1,7 @@
 {
   "name": "exercism-javascript",
   "description": "Exercism exercises in Javascript.",
-  "author": "Katrina Owen",
+  "author": "Daniel",
   "private": true,
   "repository": {
     "type": "git",
