@@ -10,5 +10,5 @@ export const COLORS = [
   'grey',
   'white',
 ];
-export const value = (colors) => Number(colors.map(colorCode).join(''));
 const colorCode = (color) => COLORS.indexOf(color);
+export const value = (colors) => Number(colors.map(colorCode).join(''));
